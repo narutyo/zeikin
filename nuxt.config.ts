@@ -1,5 +1,8 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  bridge: {
+    meta: true
+  },  
   typescript: {
     shim: false,
     strict: true
@@ -15,9 +18,12 @@ export default defineNuxtConfig({
       'process.env.DEBUG': false
     },
     server: {
-      watch: {
-        usePolling: true
+      port: 3001,
+      hmr: {
+        // protocol: 'ws',
+        // host: 'localhost',
+        port: 3001,
       }
-    }
-  }
+    },
+  },
 })
