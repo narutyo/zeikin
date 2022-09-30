@@ -26,4 +26,21 @@ export default defineNuxtConfig({
       }
     },
   },
+
+  imports: {
+    dirs: [
+      'composables/**'
+    ]
+  },
+
+
+  runtimeConfig: {
+    public: {
+      homeUrl: process.env.HOME_URL,
+      title: process.env.TITLE,
+      apiKey: process.env.API_KEY,
+      baseURL: process.env.SHEET_URL
+    },
+  },
+
 })
